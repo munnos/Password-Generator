@@ -54,6 +54,36 @@ var specialCharacters = [
   "~",
 ];
 
+var userchoiceCaps = window.prompt(
+  "Do you wish to include capital letters in the password? Please enter yes or no"
+);
+
+userchoiceCaps = userchoiceCaps.toUpperCase();
+
+capitalLetters();
+
+var userchoiceSpecial = window.prompt(
+  "Do you wish to include special characters in the password? Please enter yes or no"
+);
+
+userchoiceSpecial = userchoiceSpecial.toUpperCase();
+
+specialCharacters();
+
+var userchoiceNumbers = window.prompt(
+  "Do you wish to include numbers in the password? Please enter yes or no"
+);
+
+userchoiceNumbers = userchoiceNumbers.toUpperCase();
+
+numbers();
+
+var characters = window.prompt(
+  "How many characters do you wish your password to contain?"
+);
+
+characters();
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();

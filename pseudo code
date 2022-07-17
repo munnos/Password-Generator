@@ -1,0 +1,4 @@
+##Pseudo Code
+
+Want password to be empty array. All characters are arrays that push character into empty array which is then password.
+
