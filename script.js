@@ -1,7 +1,64 @@
 // Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-var passwordContainer = [];
+// Write password to the #password input
+function writePassword() {  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+// Event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+//Start of code to generate password
+
+function makePassword() {
+
+
+var lengthofPassword = window.prompt(
+  "How many characters do you wish your password to contain?");
+
+  var userchoiceCharacters = parseInt(lengthofPassword);
+
+  if (
+    lengthofPassword < 8 ||
+    lengthofPassword > 128 ||
+    isNaN(userchoiceCharacters) )
+ { return alert("Please insert a number between 8 and 128");
+}
+
+var userchoiceCaps = window.prompt(
+  "Do you wish to include capital letters in the password? Please enter yes or no"
+);
+
+
+
+var userchoiceSpecial = window.prompt(
+  "Do you wish to include special characters in the password? Please enter yes or no"
+);
+
+userchoiceSpecial = userchoiceSpecial.toUpperCase();
+
+
+var userchoiceNumbers = window.prompt(
+  "Do you wish to include numbers in the password? Please enter yes or no"
+);
+
+userchoiceNumbers = userchoiceNumbers.toUpperCase();
+
+
+
+var characters = window.prompt(
+  "How many characters do you wish your password to contain?"
+);
+
+
+
+
+
+
 
 var letters = [
   "a",
@@ -54,43 +111,20 @@ var specialCharacters = [
   "~",
 ];
 
-var userchoiceCaps = window.prompt(
-  "Do you wish to include capital letters in the password? Please enter yes or no"
-);
 
-userchoiceCaps = userchoiceCaps.toUpperCase();
 
-capitalLetters();
+var passwordContainer = [];
 
-var userchoiceSpecial = window.prompt(
-  "Do you wish to include special characters in the password? Please enter yes or no"
-);
+function characters();
 
-userchoiceSpecial = userchoiceSpecial.toUpperCase();
+if (characters <= 128);
 
-specialCharacters();
 
-var userchoiceNumbers = window.prompt(
-  "Do you wish to include numbers in the password? Please enter yes or no"
-);
 
-userchoiceNumbers = userchoiceNumbers.toUpperCase();
-
-numbers();
 
 var characters = window.prompt(
   "How many characters do you wish your password to contain?"
 );
 
 characters();
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
