@@ -134,7 +134,7 @@ function generatePassword() {
     passwordContainer = passwordContainer.concat(lowerLetters);
   } else if (userchoiceCaps === "no") {
     null;
-  } else {
-    return;
+  } else if (userchoiceCaps === null) {
+    alert("you exited the password generator!");
   }
 }
