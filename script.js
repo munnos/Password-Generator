@@ -30,6 +30,8 @@ function generatePassword() {
     return alert("Please insert a number between 8 and 128");
   }
 
+  console.log(userchoiceCharacters);
+
   var userchoiceCaps = window.prompt(
     "Do you wish to include capital letters in the password? Please enter yes or no"
   );
@@ -130,5 +132,9 @@ function generatePassword() {
     capsValue = lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
     finishedPassword.unshift(capsValue);
     passwordContainer = passwordContainer.concat(lowerLetters);
-  } else null;
+  } else if (userchoiceCaps === "no") {
+    null;
+  } else {
+    return;
+  }
 }
