@@ -116,14 +116,29 @@ function generatePassword() {
 
   console.log(userchoiceCharacters);
 
+  var userchoiceLowers = window.prompt(
+    "Do you wish to include sentence case letters in your password? Please enter yes or no"
+  );
+
+  if (userchoiceLowers === "yes") {
+    lowersValue = lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
+    finishedPassword.push(lowersValue);
+    passwordContainer = passwordContainer.concat(lowerLetters);
+  } else if (userchoiceLowers === "no") {
+    null;
+  } else if (userchoiceLowers === null) {
+    alert("you exited the password generator!");
+    return;
+  }
+
   var userchoiceCaps = window.prompt(
     "Do you wish to include capital letters in the password? Please enter yes or no"
   );
 
   if (userchoiceCaps === "yes") {
-    capsValue = lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
+    capsValue = upperLetters[Math.floor(Math.random() * upperLetters.length)];
     finishedPassword.push(capsValue);
-    passwordContainer = passwordContainer.concat(lowerLetters);
+    passwordContainer = passwordContainer.concat(upperLetters);
   } else if (userchoiceCaps === "no") {
     null;
   } else if (userchoiceCaps === null) {
@@ -154,7 +169,17 @@ function generatePassword() {
   if (userchoiceNumbers === "yes") {
     numbersValue = numbers[Math.floor(Math.random() * numbers.length)];
     finishedPassword.push(numbersValue);
+    passwordContainer = passwordContainer.concat(numbers);
+    // return finishedPassword.join("");
+  } else if (userchoiceNumbers === "no") {
+    null;
+    // return finishedPassword.join("");
+  } else if (userchoiceNumbers === null) {
+    alert("You exited the password generator! Please try again");
+    return;
   }
+
+  console.log(finishedPassword);
 }
 
 // if (userchoiceCaps === "yes") {
