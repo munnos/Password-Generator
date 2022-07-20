@@ -180,6 +180,13 @@ function generatePassword() {
   }
 
   console.log(finishedPassword);
+
+  for (var i = finishedPassword.length; i < lengthofPassword; i++) {
+    finishedPassword.push(
+      passwordContainer[Math.floor(Math.random() * passwordContainer.length)]
+    );
+  }
+  return finishedPassword.join("");
 }
 
 // if (userchoiceCaps === "yes") {
