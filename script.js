@@ -15,6 +15,8 @@ generateBtn.addEventListener("click", writePassword);
 
 //Start of code to generate password
 
+// Arrays of characters to later loop through and put in seperate array
+
 var lowerLetters = [
   "a",
   "b",
@@ -98,6 +100,8 @@ var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var passwordContainer = [];
 
 var finishedPassword = [];
+
+// Start of user prompts
 
 function generatePassword() {
   var lengthofPassword = window.prompt(
@@ -186,18 +190,8 @@ function generatePassword() {
       passwordContainer[Math.floor(Math.random() * passwordContainer.length)]
     );
   }
+
+  // Converting finished array into a string to enable password to render
+
   return finishedPassword.join("");
 }
-
-// if (userchoiceCaps === "yes") {
-//   capsValue = lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
-//   finishedPassword.unshift(capsValue);
-//   passwordContainer = passwordContainer.concat(lowerLetters);
-// } else if (userchoiceCaps === "no") {
-//   null;
-// } else if (userchoiceCaps === null) {
-//   alert("you exited the password generator!");
-// }
-// }
-
-// if (
