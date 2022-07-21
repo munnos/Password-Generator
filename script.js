@@ -131,7 +131,7 @@ function generatePassword() {
   } else if (userchoiceLowers === "no") {
     null;
   } else if (userchoiceLowers === null) {
-    alert("you exited the password generator!");
+    alert("You exited the password generator! Please try again");
     return;
   }
 
@@ -146,7 +146,7 @@ function generatePassword() {
   } else if (userchoiceCaps === "no") {
     null;
   } else if (userchoiceCaps === null) {
-    alert("you exited the password generator!");
+    alert("You exited the password generator! Please try again");
     return;
   }
 
@@ -162,7 +162,7 @@ function generatePassword() {
   } else if (userchoiceSpecial === "no") {
     null;
   } else if (userchoiceSpecial === null) {
-    alert("you exited the password generator!");
+    alert("You exited the password generator! Please try again");
     return;
   }
 
